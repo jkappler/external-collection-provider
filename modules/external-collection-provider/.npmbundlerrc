@@ -1,9 +1,0 @@
-{
-	"config": {
-		"imports": {
-			"@liferay/fragment-renderer-collection-filter-impl": {
-				"/": ">=1.0.0"
-			}
-		}
-	}
-}
