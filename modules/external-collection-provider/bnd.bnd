@@ -1,0 +1,4 @@
+Bundle-Name: Liferay External Collection Provider
+Bundle-SymbolicName: com.liferay.external.collection.provider
+Bundle-Version: 1.0.0
+Web-ContextPath: /liferay-external-collection-provider

@@ -1,0 +1,34 @@
+dependencies {
+	compileOnly fileTree(getProperty('liferay.source.home.dir') + '/portal-kernel') {
+		include(
+			'portal-kernel.jar'
+		)
+	}
+
+	compileOnly fileTree(getProperty('liferay.source.home.dir') + '/util-taglib') {
+		include(
+			'util-taglib.jar'
+		)
+	}
+
+	compileOnly fileTree(getProperty('liferay.workspace.home.dir') + '/osgi/modules') {
+		include(
+			'com.liferay.info.api.jar',
+			'com.liferay.info.taglib.jar'
+		)
+	}
+
+	compileOnly fileTree(getProperty('liferay.workspace.home.dir') + '/osgi/static') {
+		include(
+			'com.liferay.portal.osgi.web.servlet.jsp.compiler.jar',
+		)
+	}
+
+	compileOnly group: "com.liferay", name: "com.liferay.petra.function", version: "4.0.2"
+	compileOnly group: "javax.servlet", name: "javax.servlet-api", version: "3.0.1"
+	compileOnly group: "javax.servlet", name: "jsp-api", version: "2.0"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations", version: "1.3.0"
+	compileOnly group: "org.osgi", name: "osgi.core", version: "6.0.0"
+
+	group = "external-collection-provider"
+}
