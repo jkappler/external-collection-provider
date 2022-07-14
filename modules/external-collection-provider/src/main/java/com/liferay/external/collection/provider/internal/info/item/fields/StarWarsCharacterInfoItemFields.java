@@ -21,11 +21,10 @@ import com.liferay.info.localized.InfoLocalizedValue;
 /**
  * @author Jürgen Kappler
  */
-public interface StarWarsCharacterInfoItemFields {
+public class StarWarsCharacterInfoItemFields {
 
 	public static final InfoField<TextInfoFieldType> birthYearInfoField =
-		InfoField.builder(
-		).infoFieldType(
+		BuilderHolder._builder.infoFieldType(
 			TextInfoFieldType.INSTANCE
 		).name(
 			"birthYear"
@@ -34,8 +33,7 @@ public interface StarWarsCharacterInfoItemFields {
 				StarWarsCharacterInfoItemFields.class, "birth-year")
 		).build();
 	public static final InfoField<TextInfoFieldType> eyeColorInfoField =
-		InfoField.builder(
-		).infoFieldType(
+		BuilderHolder._builder.infoFieldType(
 			TextInfoFieldType.INSTANCE
 		).name(
 			"eyeColor"
@@ -44,8 +42,7 @@ public interface StarWarsCharacterInfoItemFields {
 				StarWarsCharacterInfoItemFields.class, "eye-color")
 		).build();
 	public static final InfoField<TextInfoFieldType> genderInfoField =
-		InfoField.builder(
-		).infoFieldType(
+		BuilderHolder._builder.infoFieldType(
 			TextInfoFieldType.INSTANCE
 		).name(
 			"gender"
@@ -54,8 +51,7 @@ public interface StarWarsCharacterInfoItemFields {
 				StarWarsCharacterInfoItemFields.class, "gender")
 		).build();
 	public static final InfoField<TextInfoFieldType> hairColorInfoField =
-		InfoField.builder(
-		).infoFieldType(
+		BuilderHolder._builder.infoFieldType(
 			TextInfoFieldType.INSTANCE
 		).name(
 			"hairColor"
@@ -64,8 +60,7 @@ public interface StarWarsCharacterInfoItemFields {
 				StarWarsCharacterInfoItemFields.class, "hair-color")
 		).build();
 	public static final InfoField<TextInfoFieldType> heightInfoField =
-		InfoField.builder(
-		).infoFieldType(
+		BuilderHolder._builder.infoFieldType(
 			TextInfoFieldType.INSTANCE
 		).name(
 			"height"
@@ -74,8 +69,7 @@ public interface StarWarsCharacterInfoItemFields {
 				StarWarsCharacterInfoItemFields.class, "height")
 		).build();
 	public static final InfoField<TextInfoFieldType> nameInfoField =
-		InfoField.builder(
-		).infoFieldType(
+		BuilderHolder._builder.infoFieldType(
 			TextInfoFieldType.INSTANCE
 		).name(
 			"name"
@@ -83,5 +77,13 @@ public interface StarWarsCharacterInfoItemFields {
 			InfoLocalizedValue.localize(
 				StarWarsCharacterInfoItemFields.class, "name")
 		).build();
+
+	private static class BuilderHolder {
+
+		private static final InfoField.NamespacedBuilder _builder =
+			InfoField.builder(
+				StarWarsCharacterInfoItemFields.class.getSimpleName());
+
+	}
 
 }
